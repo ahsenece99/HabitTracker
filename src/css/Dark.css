@@ -1,0 +1,174 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;500&display=swap');
+
+html, body {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('../assets/vecteezy_3d-rendering-of-a-group-of-diamond-in-black-and-white_27812520.jpg') no-repeat center center fixed;
+  background-size: cover;
+  z-index: -1;
+}
+
+.home-container,
+.tasks-container,
+.add-task-container,
+.progress-container,
+.settings-container {
+  background-color: rgba(18, 18, 18, 0.65);
+  color: #f0f0f0;
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.05);
+}
+
+.home-container h1,
+.tasks-header h2,
+.add-task-container h2,
+.progress-container h2,
+.settings-container h2 {
+  background: linear-gradient(90deg, #cba5f3, #89d2ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+nav {
+  background: linear-gradient(135deg, #1a1a1a, #2e2e2e) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+nav a,
+.nav-center a {
+  color: #ffffff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card,
+.stat-card,
+.completion-rate,
+.date-group,
+.task-list,
+.task-item {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.task-title {
+  color: #ffffff;
+}
+
+.task-title.completed {
+  color: #aaaaaa;
+}
+
+.task-checkbox {
+  accent-color: #cba5f3;
+}
+
+.delete-btn {
+  color: #ff8fa3;
+}
+
+.home-container p,
+.feature-card p,
+.tasks-header p,
+.empty-state p,
+.stat-label,
+.app-info {
+  color: #cccccc;
+}
+
+.form-group label,
+.settings-section h3 {
+  color: #f0f0f0;
+}
+
+.form-group input,
+.form-group select,
+.language-dropdown {
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  border: 1px solid #444;
+}
+
+.submit-btn,
+.get-started-btn,
+.btn {
+  background: linear-gradient(135deg, #d7afff, #89d2ff);
+  color: #121212;
+  border: none;
+  transition: background 0.3s ease, transform 0.2s;
+}
+
+.submit-btn:hover,
+.get-started-btn:hover,
+.btn:hover {
+  background: linear-gradient(135deg, #be9eff, #72c4ff);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(200, 200, 255, 0.2);
+}
+
+.date-header {
+  background: linear-gradient(135deg, #d7afff, #89d2ff);
+  color: #121212;
+  font-weight: 600;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.slider {
+  background-color: #333;
+}
+
+input:checked + .slider {
+  background-color: #cba5f3;
+}
+
+.slider:before {
+  background-color: white;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #b8b0ff, #a4dcff);
+}
+
+.completion-rate {
+  background: rgba(30, 30, 30, 0.9); 
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.stat-label {
+  color: #cccccc;
+}
+
+.stat-value {
+  color: #ffffff; 
+}
+
+.progress-bar {
+  background: #2c2c2c;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, #d7afff, #89d2ff);
+}
+
+
+.home-container {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
