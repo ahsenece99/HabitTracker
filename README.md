@@ -17,11 +17,13 @@ Modern frontend teknolojileri kullanılarak inşa edilmiştir.
 
 ```
 src/
-├── pages/           # Sayfa bileşenleri (Home, Tasks, AddTask, Progress, Settings)
-├── css/             # Sayfalara özel stiller
-├── store/           # Zustand store
-├── App.tsx          # Ana uygulama bileşeni
-├── main.tsx         # Uygulama giriş noktası
+├── components/           # Sayfa bileşenleri (Home, Tasks, AddTask, Progress, Settings)
+├── css/                  # Sayfalara özel stiller
+├── store/                # Zustand store
+├── utils/                # Yardımcı dosyalar
+├── App.tsx               # Tüm sayfaları ve bileşenleri birleştiren ana uygulama bileşeni
+├── index.css             # Ana uygulama bileşeni
+├── main.tsx              # Uygulama giriş noktası
 ```
 
 ## Kurulum
