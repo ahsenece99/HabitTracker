@@ -1,28 +1,66 @@
-# React + TypeScript + Vite
+# Habit Tracker – React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu proje, görevlerini takip etmek, alışkanlıklarını yönetmek ve ilerlemeni düzenli olarak gözlemlemek amacıyla geliştirilmiş bir web uygulamasıdır.  
+Modern frontend teknolojileri kullanılarak inşa edilmiştir.
 
-Currently, two official plugins are available:
+## Kullanılan Teknolojiler
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React – Bileşen tabanlı kullanıcı arayüzü
+- TypeScript – Tip güvenliği
+- Vite – Hızlı geliştirme ve derleme ortamı
+- Zustand – Global state yönetimi
+- Formik – Form kontrolü ve validasyon
+- React Router – Sayfa yönlendirme
+- CSS – Özelleştirilmiş responsive stiller
 
-## Expanding the ESLint configuration
+## Proje Yapısı
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+```
+src/
+├── pages/           # Sayfa bileşenleri (Home, Tasks, AddTask, Progress, Settings)
+├── css/             # Sayfalara özel stiller
+├── store/           # Zustand store
+├── App.tsx          # Ana uygulama bileşeni
+├── main.tsx         # Uygulama giriş noktası
+```
+
+## Kurulum
+
+```bash
+# Projeyi klonlayın
+git clone https://github.com/ahsenece99/HabitTracker.git
+cd HabitTracker
+
+# Bağımlılıkları yükleyin
+npm install
+
+# Geliştirme sunucusunu başlatın
+npm run dev
+```
+
+Tarayıcıdan `http://localhost:5173` adresine giderek uygulamayı görüntüleyebilirsiniz.
+
+## Uygulama Özellikleri
+
+- Görev ekleme, tamamlama ve silme
+- Görevleri tarihe göre listeleme
+- İlerleme sayfası
+- Responsive tasarım
+- Global state yönetimi (Zustand ile)
+- Form yönetimi (Formik ile)
+
+## ESLint Ayarları (isteğe bağlı)
+
+Eğer projede tip farkındalığına sahip lint kuralları tanımlamak isterseniz, `eslint.config.js` dosyasını aşağıdaki şekilde güncelleyebilirsiniz:
 
 ```js
 export default tseslint.config({
   extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
     ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
     ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
     ...tseslint.configs.stylisticTypeChecked,
   ],
   languageOptions: {
-    // other options...
     parserOptions: {
       project: ['./tsconfig.node.json', './tsconfig.app.json'],
       tsconfigRootDir: import.meta.dirname,
@@ -31,24 +69,11 @@ export default tseslint.config({
 })
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Ayrıca `eslint-plugin-react-x` ve `eslint-plugin-react-dom` gibi eklentileri de kullanabilirsiniz.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Lisans
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Bu proje MIT lisansı ile yayınlanmıştır.
+
+Katkı sağlamak isteyenler pull request gönderebilir.
+
